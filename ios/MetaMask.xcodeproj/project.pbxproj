@@ -23,8 +23,8 @@
 		151E2E712319C0E2001197E9 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		15205D6321596BAA0049EA93 /* MetaMask.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 15205D6221596AD90049EA93 /* MetaMask.entitlements */; };
 		153C1ABB2217BCDC0088EFE0 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 153C1A742217BCDC0088EFE0 /* JavaScriptCore.framework */; };
-		153F84CA2319B8FD00C19B63 /* Branch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 153F84C92319B8DB00C19B63 /* Branch.framework */; };
-		153F84CB2319B8FD00C19B63 /* Branch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 153F84C92319B8DB00C19B63 /* Branch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1542D299232AF4D900633F9B /* Branch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 153F84C92319B8DB00C19B63 /* Branch.framework */; };
+		1542D29A232AF4D900633F9B /* Branch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 153F84C92319B8DB00C19B63 /* Branch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		154BC3592238C164009AF026 /* libRNSVG.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 154BC3562238C135009AF026 /* libRNSVG.a */; };
 		158B063B211A72F500DF3C74 /* InpageBridgeWeb3.js in Resources */ = {isa = PBXBuildFile; fileRef = 158B0639211A72F500DF3C74 /* InpageBridgeWeb3.js */; };
 		158B063C211A72F500DF3C74 /* InpageBridge.js in Resources */ = {isa = PBXBuildFile; fileRef = 158B063A211A72F500DF3C74 /* InpageBridge.js */; };
@@ -224,7 +224,7 @@
 			remoteGlobalIDString = E298D0521C73D1B800589D22;
 			remoteInfo = Branch;
 		};
-		153F84CC2319B8FD00C19B63 /* PBXContainerItemProxy */ = {
+		1542D29B232AF4D900633F9B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 153F84C42319B8DA00C19B63 /* BranchSDK.xcodeproj */;
 			proxyType = 1;
@@ -703,7 +703,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				15F7795F22A1B7B500B1DF8C /* Mixpanel.framework in Embed Frameworks */,
-				153F84CB2319B8FD00C19B63 /* Branch.framework in Embed Frameworks */,
+				1542D29A232AF4D900633F9B /* Branch.framework in Embed Frameworks */,
 				15ACC9FD22655C3A0063978B /* Lottie.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -865,9 +865,9 @@
 				4556CB229E7C4FCF98489E2E /* libreact-native-branch.a in Frameworks */,
 				79B52D69E62442C597FE4D69 /* libRNScreens.a in Frameworks */,
 				5C0349CCAB9C4E179B04905D /* libRNGestureHandler.a in Frameworks */,
+				1542D299232AF4D900633F9B /* Branch.framework in Frameworks */,
 				C017D5C2EDDF43E28281BE61 /* libRNDeviceInfo.a in Frameworks */,
 				03D91D70A389444797688056 /* libRNBackgroundTimer.a in Frameworks */,
-				153F84CA2319B8FD00C19B63 /* Branch.framework in Frameworks */,
 				BF4370F845E740D0A30CEC30 /* libRCTSearchApi.a in Frameworks */,
 				258B2C29C8CD42BBBF3E4872 /* libLottie.a in Frameworks */,
 				5B523AAB3B4B42348DA7D392 /* libLottieReactNative.a in Frameworks */,
@@ -1465,7 +1465,7 @@
 			dependencies = (
 				15ACC9FF22655C3A0063978B /* PBXTargetDependency */,
 				15F7796122A1B7B500B1DF8C /* PBXTargetDependency */,
-				153F84CD2319B8FD00C19B63 /* PBXTargetDependency */,
+				1542D29C232AF4D900633F9B /* PBXTargetDependency */,
 			);
 			name = MetaMask;
 			productName = "Hello World";
@@ -2369,10 +2369,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		153F84CD2319B8FD00C19B63 /* PBXTargetDependency */ = {
+		1542D29C232AF4D900633F9B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Branch;
-			targetProxy = 153F84CC2319B8FD00C19B63 /* PBXContainerItemProxy */;
+			targetProxy = 1542D29B232AF4D900633F9B /* PBXContainerItemProxy */;
 		};
 		15ACC9FF22655C3A0063978B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
