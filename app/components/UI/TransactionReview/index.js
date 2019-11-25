@@ -3,7 +3,7 @@ import ActionView from '../ActionView';
 import Identicon from '../Identicon';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 import PropTypes from 'prop-types';
-import { StyleSheet, Text, View, PixelRatio, InteractionManager } from 'react-native';
+import { Alert, StyleSheet, Text, View, PixelRatio, InteractionManager } from 'react-native';
 import { colors, fontStyles } from '../../../styles/common';
 import { connect } from 'react-redux';
 import { strings } from '../../../../locales/i18n';
@@ -141,10 +141,6 @@ class TransactionReview extends PureComponent {
 		 */
 		onModeChange: PropTypes.func,
 		/**
-		 * Callback triggered when this transaction is cancelled
-		 */
-		onConfirm: PropTypes.func,
-		/**
 		 * Indicates whether hex data should be shown in transaction editor
 		 */
 		showHexData: PropTypes.bool,
@@ -183,6 +179,10 @@ class TransactionReview extends PureComponent {
 		InteractionManager.runAfterInteractions(() => {
 			Analytics.trackEvent(ANALYTICS_EVENT_OPTS.TRANSACTIONS_CONFIRM_STARTED);
 		});
+	};
+
+	onConfirm = () => {
+		Alert.alert(JSON.stringify(this.props.transaction));
 	};
 
 	edit = () => {
@@ -299,7 +299,7 @@ class TransactionReview extends PureComponent {
 					confirmButtonMode="confirm"
 					cancelText={strings('transaction.reject')}
 					onCancelPress={this.props.onCancel}
-					onConfirmPress={this.props.onConfirm}
+					onConfirmPress={this.onConfirm}
 					confirmed={transactionConfirmed}
 					confirmDisabled={error !== undefined}
 				>
