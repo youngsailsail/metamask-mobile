@@ -240,6 +240,7 @@ class AccountBackupStep5 extends PureComponent {
 	}
 
 	selectWord = (word, i) => {
+		console.log('SELECTING WORD', word, ' at index ', i);
 		const newConfirmedWords = this.state.confirmedWords.slice();
 		let newIndex;
 		if (this.isSelectedWord(word, i)) {
@@ -276,11 +277,18 @@ class AccountBackupStep5 extends PureComponent {
 	}
 
 	isSelectedWord(word, index) {
+		console.log('=======================================');
+		console.log('CHECKING IF WORD IS SELECTED', word, index);
 		if (!this.state.confirmedWords.includes(word)) {
 			return false;
 		}
+		console.log('CHECKING TOTAL OCURRENCES FOR WORD', word);
 		const totalOcurrences = this.getNumberOfOcurrences(word, this.words);
+		console.log('TOTAL OCURRENCES', totalOcurrences);
 		const confirmedWordsOcurrences = this.getNumberOfOcurrences(word, this.state.confirmedWords);
+		console.log('confirmedWordsOcurrences', confirmedWordsOcurrences);
+
+		console.log('IS EQUAL?', totalOcurrences === confirmedWordsOcurrences);
 		if (totalOcurrences === confirmedWordsOcurrences) {
 			return true;
 		}
@@ -291,10 +299,13 @@ class AccountBackupStep5 extends PureComponent {
 			if (this.words[i] === word) {
 				currentOccurence++;
 				if (i === index && currentOccurence <= confirmedWordsOcurrences) {
+					console.log('FOUND OCURRENCE AT ', i, index, currentOccurence, confirmedWordsOcurrences);
 					return true;
 				}
 			}
 		}
+		console.log('NOT SELECTED');
+		console.log('=======================================');
 		return false;
 	}
 
