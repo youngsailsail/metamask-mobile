@@ -181,7 +181,7 @@ workflows:
           requires:
             - lint
             - test-unit
-    #       - test-e2e-ios
+    #       - test-e2e-ios222
     #   - upload-coverage:
     #       requires:
     #         - test-unit
